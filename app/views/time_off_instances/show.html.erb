@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @time_off_instance.employee.name %>
+</p>
+
+<p>
+  <strong>Hours used:</strong>
+  <%= @time_off_instance.hours_used %>
+</p>
+
+<%= link_to 'Edit', edit_time_off_instance_path(@time_off_instance) %> |
+<%= link_to 'Back', time_off_instances_path %>
