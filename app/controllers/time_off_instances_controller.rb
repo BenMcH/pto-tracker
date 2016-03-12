@@ -28,9 +28,8 @@ class TimeOffInstancesController < ApplicationController
     #@time_off_instance.employee.hours_left -= @time_off_instance.hours_used
     respond_to do |format|
       if @time_off_instance.save
-        @time_off_instance.employee.hours_left -= @time_off_instance.hours_used
-        @time_off_instance.employee.save
-        print "HERE HERE  HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE"
+        self.use_pto_hours
+        #print "HERE HERE  HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE HERE"
         format.html { redirect_to @time_off_instance, notice: 'Time off instance was successfully created.' }
         format.json { render :show, status: :created, location: @time_off_instance }
       else
@@ -44,7 +43,9 @@ class TimeOffInstancesController < ApplicationController
   # PATCH/PUT /time_off_instances/1.json
   def update
     respond_to do |format|
+      self.unuse_pto_hours
       if @time_off_instance.update(time_off_instance_params)
+        self.use_pto_hours
         format.html { redirect_to @time_off_instance, notice: 'Time off instance was successfully updated.' }
         format.json { render :show, status: :ok, location: @time_off_instance }
       else
@@ -57,11 +58,22 @@ class TimeOffInstancesController < ApplicationController
   # DELETE /time_off_instances/1
   # DELETE /time_off_instances/1.json
   def destroy
+    self.unuse_pto_hours
     @time_off_instance.destroy
     respond_to do |format|
       format.html { redirect_to time_off_instances_url, notice: 'Time off instance was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def unuse_pto_hours
+    @time_off_instance.employee.hours_left += @time_off_instance.hours_used
+    @time_off_instance.employee.save
+  end
+
+  def use_pto_hours
+    @time_off_instance.employee.hours_left -= @time_off_instance.hours_used
+    @time_off_instance.employee.save
   end
 
   private
@@ -74,4 +86,4 @@ class TimeOffInstancesController < ApplicationController
     def time_off_instance_params
       params.require(:time_off_instance).permit(:employee_id, :hours_used)
     end
-end
+  end

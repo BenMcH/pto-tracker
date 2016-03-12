@@ -2819,3 +2819,953 @@ Processing by EmployeesController#index as HTML
   [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
   Rendered employees/index.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:23:56 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 256ms (Views: 242.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/employees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/scaffolds.self-abfb4d719a4099ae555784259a6b56eb74ab9234680cdac07245830a22197039.css?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/time_off_instances.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/time_off_instances.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-11 19:23:56 -0600
+
+
+Started GET "/2/edit" for ::1 at 2016-03-11 19:24:02 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered employees/_form.html.erb (16.9ms)
+  Rendered employees/edit.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 100ms (Views: 89.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/2" for ::1 at 2016-03-11 19:24:05 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4rnmoG3nWiv5+Em+zdHW78kJ4o9EvLbFPrzwQUQK47bZI5ElTFH1BqdMN9Y4ugcwa9HA32JE1+ceudvd6g1xTw==", "employee"=>{"name"=>"Benjamin McHone", "hours_left"=>"152.0"}, "commit"=>"Update Employee", "id"=>"2"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "employees" SET "hours_left" = ?, "updated_at" = ? WHERE "employees"."id" = ?  [["hours_left", 152.0], ["updated_at", "2016-03-12 01:24:05.714183"], ["id", 2]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/2
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/2" for ::1 at 2016-03-11 19:24:05 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered employees/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:24:08 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:25:34 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/employees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/scaffolds.self-abfb4d719a4099ae555784259a6b56eb74ab9234680cdac07245830a22197039.css?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/time_off_instances.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/assets/time_off_instances.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:25:34 -0600
+
+
+Started GET "/" for ::1 at 2016-03-11 19:25:54 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.self-abfb4d719a4099ae555784259a6b56eb74ab9234680cdac07245830a22197039.css?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/employees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/time_off_instances.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/time_off_instances.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-11 19:25:55 -0600
+
+
+Started GET "/" for ::1 at 2016-03-11 19:25:56 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.self-abfb4d719a4099ae555784259a6b56eb74ab9234680cdac07245830a22197039.css?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/employees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/time_off_instances.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/time_off_instances.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-11 19:25:56 -0600
+
+
+Started GET "/time_off_instances/new" for ::1 at 2016-03-11 19:26:09 -0600
+Processing by TimeOffInstancesController#new as HTML
+  Rendered time_off_instances/_form.html.erb (3.3ms)
+  Rendered time_off_instances/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 28ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/time_off_instances/new" for ::1 at 2016-03-11 19:26:13 -0600
+Processing by TimeOffInstancesController#new as HTML
+  Rendered time_off_instances/_form.html.erb (1.7ms)
+  Rendered time_off_instances/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:26:19 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.2ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:27:51 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.2ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/employees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/scaffolds.self-abfb4d719a4099ae555784259a6b56eb74ab9234680cdac07245830a22197039.css?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/time_off_instances.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/time_off_instances.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-11 19:27:51 -0600
+
+
+Started GET "/" for ::1 at 2016-03-11 19:27:54 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:10 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.2ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/time_off_instances/4" for ::1 at 2016-03-11 19:28:15 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IkrSuOKvPJYXOk7PER7OkeMKk0ry0FNLBjmQX0WHUWAZ0KU9wxmTu0mOMKfkdR9OQdKxGtQoMmkmPLvD64DDmQ==", "id"=>"4"}
+  [1m[35mTimeOffInstance Load (0.2ms)[0m  SELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?  [["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:15 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.2ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/time_off_instances/5" for ::1 at 2016-03-11 19:28:17 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dAx3KWR5KVLy1HQx8AnwLnPzgvKK3Rybw+vgn0e9olhPlgCsRc+Gf6xgClkFYiHx0Sugoqwlfbnj7ssD6bowoQ==", "id"=>"5"}
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?[0m  [["id", 5]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 6ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:17 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.2ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/time_off_instances/6" for ::1 at 2016-03-11 19:28:19 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q/QTIy7MAdG+LXF4fCXRVUDg+4aVVraJzU/3F6c8NNF4bmSmD3qu/OCZDxCJTgCK4jjZ1rOu16vtStyLCTumKA==", "id"=>"6"}
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?[0m  [["id", 6]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 6ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:19 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.2ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/time_off_instances/7" for ::1 at 2016-03-11 19:28:21 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FMidticNg1dBZEJT6CwEflOmpn94cj2k3asbqpDadnwvUuozBrsseh/QPDsdR9Wh8X6EL16KXIb9rjA2Pt3khQ==", "id"=>"7"}
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?  [["id", 7]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:21 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.2ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/time_off_instances/8" for ::1 at 2016-03-11 19:28:21 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IRsUDqFqYmHxPtkXHWq8sAOoa+SwPLimk+ek+wEs2AEagWOLgNzNTK+Kp3/oAW1voXBJtJbE2YSz4o9nrytK+A==", "id"=>"8"}
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?  [["id", 8]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 6ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:21 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/time_off_instances/9" for ::1 at 2016-03-11 19:28:22 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"B2q/VRVNhWt3jazhx29TK20dO757csoRSHGZEoU6MCA88MjQNPsqRik50okyBIL0z8UZ7l2KqzNodLKOKz2i2Q==", "id"=>"9"}
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:22 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.2ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/time_off_instances/10" for ::1 at 2016-03-11 19:28:23 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HIsQV0P6qEwRlClcwdd81OskJic6C3RmkHSYVIy98fInEWfSYkwHYU8gVzQ0vK0LSfwEdxzzFUSwcbPIIrpjCw==", "id"=>"10"}
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?[0m  [["id", 10]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 5ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:23 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/time_off_instances/11" for ::1 at 2016-03-11 19:28:24 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2JUr9agYZjsuTMwEW+U0LihGRTSYFXzD3upHFLPDhb/jD1xwia7JFnD4smyujuXxip5nZL7tHeH+72yIHcQXRg==", "id"=>"11"}
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?  [["id", 11]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 6ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:24 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/time_off_instances/12" for ::1 at 2016-03-11 19:28:25 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ror3JGTmHyaVujJxDmxKgygXESQTxW/KeSiKShYVw159EIChRVCwC8sOTBn7B5tcis8zdDU9DuhZLaHWuBJRpw==", "id"=>"12"}
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?  [["id", 12]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 6ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:28:25 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.2ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  Rendered time_off_instances/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/time_off_instances/new" for ::1 at 2016-03-11 19:28:28 -0600
+Processing by TimeOffInstancesController#new as HTML
+  Rendered time_off_instances/_form.html.erb (1.7ms)
+  Rendered time_off_instances/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:34:29 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:34:31 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  Rendered time_off_instances/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:35:20 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  Rendered time_off_instances/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-abfb4d719a4099ae555784259a6b56eb74ab9234680cdac07245830a22197039.css?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/employees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/time_off_instances.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/time_off_instances.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-11 19:35:20 -0600
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:35:45 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  Rendered time_off_instances/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/employees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/scaffolds.self-abfb4d719a4099ae555784259a6b56eb74ab9234680cdac07245830a22197039.css?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/time_off_instances.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/time_off_instances.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-11 19:35:45 -0600
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:47 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:48 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:49 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:49 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:49 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:49 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:49 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:49 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:49 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:50 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:50 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:50 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:50 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:50 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:35:51 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  Rendered time_off_instances/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:52 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:53 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:53 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:53 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:35:53 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:35:58 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  Rendered time_off_instances/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:36:02 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.2ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:40:34 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.3ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  Rendered time_off_instances/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/time_off_instances/new" for ::1 at 2016-03-11 19:40:36 -0600
+Processing by TimeOffInstancesController#new as HTML
+  Rendered time_off_instances/_form.html.erb (2.1ms)
+  Rendered time_off_instances/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/time_off_instances" for ::1 at 2016-03-11 19:40:41 -0600
+Processing by TimeOffInstancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n8q/KkzLeWZTxy4xeixDyzx3jX4wyeippssF+UFz3RekUMivbX3WSw1zUFmPR5IUnq+vLhYxiYuGzi5l73RP7g==", "time_off_instance"=>{"employee_id"=>"2", "hours_used"=>"100"}, "commit"=>"Create Time off instance"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "time_off_instances" ("employee_id", "hours_used", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["employee_id", 2], ["hours_used", 100.0], ["created_at", "2016-03-12 01:40:41.240682"], ["updated_at", "2016-03-12 01:40:41.240682"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.2ms)
+
+NoMethodError (private method `use_pto_hours' called for #<TimeOffInstancesController:0x007ffe5b5af6c0>):
+  app/controllers/time_off_instances_controller.rb:31:in `block in create'
+  app/controllers/time_off_instances_controller.rb:29:in `create'
+
+
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.0ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/benmchone/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.8ms)
+
+
+Started POST "/time_off_instances" for ::1 at 2016-03-11 19:41:32 -0600
+Processing by TimeOffInstancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n8q/KkzLeWZTxy4xeixDyzx3jX4wyeippssF+UFz3RekUMivbX3WSw1zUFmPR5IUnq+vLhYxiYuGzi5l73RP7g==", "time_off_instance"=>{"employee_id"=>"2", "hours_used"=>"100"}, "commit"=>"Create Time off instance"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "time_off_instances" ("employee_id", "hours_used", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["employee_id", 2], ["hours_used", 100.0], ["created_at", "2016-03-12 01:41:32.410219"], ["updated_at", "2016-03-12 01:41:32.410219"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "employees" SET "hours_left" = ?, "updated_at" = ? WHERE "employees"."id" = ?  [["hours_left", 52.0], ["updated_at", "2016-03-12 01:41:32.421770"], ["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/time_off_instances/14
+Completed 302 Found in 23ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/time_off_instances/14" for ::1 at 2016-03-11 19:41:32 -0600
+Processing by TimeOffInstancesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mTimeOffInstance Load (0.2ms)[0m  SELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_off_instances/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/employees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/scaffolds.self-abfb4d719a4099ae555784259a6b56eb74ab9234680cdac07245830a22197039.css?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/time_off_instances.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/time_off_instances.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-03-11 19:41:32 -0600
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:41:34 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:41:35 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:41:38 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/time_off_instances/14" for ::1 at 2016-03-11 19:41:42 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w/nDncHsvtXRFxZf7S/FTUtsJsceeSH5kvpRoWDsGAT4Y7QY4FoR+I+jaDcYRBSS6bQElziBQNuy/3o9zuuK/Q==", "id"=>"14"}
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "employees" SET "hours_left" = ?, "updated_at" = ? WHERE "employees"."id" = ?  [["hours_left", 152.0], ["updated_at", "2016-03-12 01:41:42.426161"], ["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:41:42 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.2ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_off_instances/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/time_off_instances/13" for ::1 at 2016-03-11 19:41:44 -0600
+Processing by TimeOffInstancesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3drjiIN6hgVURgBuhdOX7Z3q8VqOhGDtnl6LgJDjhqrmQJQNoswpKAryfgZwuEYyPzLTCqh8Ac++W6AcPuQUUw==", "id"=>"13"}
+  [1m[36mTimeOffInstance Load (0.2ms)[0m  [1mSELECT  "time_off_instances".* FROM "time_off_instances" WHERE "time_off_instances"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "employees" SET "hours_left" = ?, "updated_at" = ? WHERE "employees"."id" = ?  [["hours_left", 252.0], ["updated_at", "2016-03-12 01:41:44.914967"], ["id", 2]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "time_off_instances" WHERE "time_off_instances"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/time_off_instances
+Completed 302 Found in 10ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:41:44 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[36mTimeOffInstance Load (0.1ms)[0m  [1mSELECT "time_off_instances".* FROM "time_off_instances"[0m
+  Rendered time_off_instances/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/time_off_instances/new" for ::1 at 2016-03-11 19:41:45 -0600
+Processing by TimeOffInstancesController#new as HTML
+  Rendered time_off_instances/_form.html.erb (1.7ms)
+  Rendered time_off_instances/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/time_off_instances" for ::1 at 2016-03-11 19:41:47 -0600
+Processing by TimeOffInstancesController#index as HTML
+  [1m[35mTimeOffInstance Load (0.1ms)[0m  SELECT "time_off_instances".* FROM "time_off_instances"
+  Rendered time_off_instances/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:41:48 -0600
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.2ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/2/edit" for ::1 at 2016-03-11 19:41:50 -0600
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered employees/_form.html.erb (1.8ms)
+  Rendered employees/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/2" for ::1 at 2016-03-11 19:41:54 -0600
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sXGrkUC2xtpOSr2JWtNiI0TwhiiFocHrQrflXjvoWOSK69wUYQBp9xD+w+GvuLP85iikeKNZoMliss7Cle/KHQ==", "employee"=>{"name"=>"Benjamin McHone", "hours_left"=>"152.0"}, "commit"=>"Update Employee", "id"=>"2"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "employees" SET "hours_left" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["hours_left", 152.0], ["updated_at", "2016-03-12 01:41:54.627964"], ["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/2
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/2" for ::1 at 2016-03-11 19:41:54 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered employees/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-11 19:42:25 -0600
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.1ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.1ms)
