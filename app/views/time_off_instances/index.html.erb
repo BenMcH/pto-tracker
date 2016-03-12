@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Time Off Instances</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Employee</th>
-      <th>Hours used</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @time_off_instances.each do |time_off_instance| %>
+<% if !@time_off_instances.empty? %>
+  <table>
+    <thead>
       <tr>
-        <td><%= time_off_instance.employee.name %></td>
-        <td><%= time_off_instance.hours_used %></td>
-        <td><%= link_to 'Show', time_off_instance %></td>
-        <td><%= link_to 'Edit', edit_time_off_instance_path(time_off_instance) %></td>
-        <td><%= link_to 'Destroy', time_off_instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Employee</th>
+        <th>Hours used</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @time_off_instances.each do |time_off_instance| %>
+        <tr>
+          <td><%= time_off_instance.employee.name %></td>
+          <td><%= time_off_instance.hours_used %></td>
+          <td><%= link_to 'Show', time_off_instance %></td>
+          <td><%= link_to 'Edit', edit_time_off_instance_path(time_off_instance) %></td>
+          <td><%= link_to 'Destroy', time_off_instance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+<p> There are no time off instances in the database</p>
+<% end %>
 <br>
 
 <%= link_to 'New Time off instance', new_time_off_instance_path %>

@@ -15,10 +15,12 @@ class TimeOffInstancesController < ApplicationController
   # GET /time_off_instances/new
   def new
     @time_off_instance = TimeOffInstance.new
+    @employees = Employee.all
   end
 
   # GET /time_off_instances/1/edit
   def edit
+    @employees = Employee.all
   end
 
   # POST /time_off_instances
@@ -84,6 +86,6 @@ class TimeOffInstancesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def time_off_instance_params
-      params.require(:time_off_instance).permit(:employee_id, :hours_used)
+      params.require(:time_off_instance).permit(:employee_id, :hours_used, :reason)
     end
   end

@@ -13,11 +13,15 @@
 
   <div class="field">
     <%= f.label :employee_id %><br>
-    <%= f.number_field :employee_id %>
+    <%= f.select :employee_id, @employees.map {|e| [e.name, e.id]} %>
   </div>
   <div class="field">
     <%= f.label :hours_used %><br>
     <%= f.text_field :hours_used %>
+  </div>
+  <div class="field">
+    <%= f.label :reason %><br>
+    <%= f.text_field :reason %>
   </div>
   <div class="actions">
     <%= f.submit %>

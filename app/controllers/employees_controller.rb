@@ -54,6 +54,11 @@ class EmployeesController < ApplicationController
   # DELETE /employees/1
   # DELETE /employees/1.json
   def destroy
+    TimeOffInstance.all.map { |e|
+      if e.employee_id == @employee.id
+        e.destroy
+      end
+    }
     @employee.destroy
     respond_to do |format|
       format.html { redirect_to employees_url, notice: 'Employee was successfully destroyed.' }

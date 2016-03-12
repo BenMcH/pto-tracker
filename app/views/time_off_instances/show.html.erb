@@ -10,5 +10,10 @@
   <%= @time_off_instance.hours_used %>
 </p>
 
+<p>
+  <strong>Reason:</strong>
+  <%= @time_off_instance.reason %>
+</p>
+
 <%= link_to 'Edit', edit_time_off_instance_path(@time_off_instance) %> |
 <%= link_to 'Back', time_off_instances_path %>
